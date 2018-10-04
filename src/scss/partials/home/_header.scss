@@ -1,0 +1,312 @@
+/*  Home-Page Module Mixins and Extends */
+@import "modules/home-page/home-module";
+@import "modules/projects-page/mixins";
+/* Gobal Variables */
+@import "partials/variables";
+@import "partials/typography";
+@import "vendor/bourbon";
+// Media Q
+@import "modules/global-mqs/mqs";
+
+html{
+  height:100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body{
+    min-height:100%;
+    background-color:#f4f4f4;
+}
+
+header{
+  // overflow: hidden;
+  // padding-top:40px;
+  padding:80px 0px 80px;
+}
+
+.welcome{
+position: relative;
+}
+
+.particles-js-canvas-el{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.aloha-pixel-logo{
+  display: flex;
+  // padding:0 50px 0px;
+  // margin: 0 auto;
+  // height:300px;
+  width:400px;
+  top: 60px;
+  position: relative;
+}
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  // background-color: #b61924;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.ctalink{
+   @include ms-respond(font-size,1);
+   text-decoration: none;
+   font-family: $monte;
+   color:#f5f5f5;
+   text-align: left;
+}
+
+.project-desc-main{
+    @include ms-respond(font-size,1);
+    text-align: left;
+}
+
+.slide-nav-trigger{
+  visibility: hidden;
+}
+
+.show{
+  transition: opacity 0.2s;
+  opacity: 1;
+  visibility: visible;
+}
+
+.hide{
+  transition: opacity 0.2s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.aloha{
+  font-family:$monte;
+  font-weight:$montB;
+}
+
+
+.intro-msg{
+    // padding for left right and bottom links
+    // @include left-right-bottom-links;
+    // left might margins pushed in closer
+    @include ms-respond(font-size, 2);
+    text-align: left;
+    line-height:ms(1);
+}
+
+.cta-intro{
+  @include ms-respond(font-size,1);
+}
+
+// .main{
+//   padding:20px 0px 0px;
+// }
+
+header #projects:hover,
+header #projects:focus {
+    color:#f5f5f5;
+}
+
+header #projects {
+    color:$typeColor;
+    // $typeColor
+    padding: 2px;
+    font-weight: 900;
+    margin: 0 -2px;
+}
+
+header #projects{
+    @include hover-links;
+}
+
+header #projects:hover,
+header #projects:focus{
+   background-size:100% 100%;
+}
+
+.skills{
+  position: relative;
+}
+
+.desktop_graphic{
+  text-align:center;
+  @include ms-respond(font-size,1);
+  display: flex;
+  justify-content: center;
+}
+
+#skills-graphic{
+  height:250px;
+}
+
+.graphic-text{
+  font-family: $monte;
+  font-weight: $montB;
+  color:$typeColorB;
+  @include ms-respond(font-size,-2);
+}
+
+
+.graph, .web, .motion{
+  // opacity: 0;
+  // transition: opacity 0.3s;
+  font-family: $monte;
+  @include ms-respond(font-size,-3);
+}
+.visable{
+	transition:opacity 0.2s ease;
+	opacity:1;
+}
+
+.hide{
+	opacity:0;
+	transition: opacity 0.3s;
+}
+.under{
+  opacity: 0;
+  transition:transform 0.3s, opacity 0.2s;
+}
+.moveUp{
+  opacity: 1;
+  transition: opacity 0.3s;
+  transition:transform 0.3s;
+  transform:translateY(-40px);
+}
+
+.under{
+  opacity: 0;
+  transition:transform 0.3s, opacity 0.2s;
+}
+
+#info-tag{
+  background-color: #4169e1;
+  color: #f6f6f6;
+  font-weight:600;
+  font-family:$monte;
+  padding:2px;
+}
+
+// circle + triangle
+.gC, .gT{
+  transition:transform 0.3s;
+  transform:translateY(0px);
+}
+
+// circle DOWN
+.playGc{
+  transition:transform 0.3s;
+  transform:translateY(10px);
+}
+//triangle UP
+.playGt{
+  transition:transform 0.3s;
+  transform:translateY(-10px);
+}
+// headerfooter
+.wN, .wF{
+  @include pWidth-desk;
+}
+
+
+// headerfooter responsive animation
+// web nav web footer
+.playwN, .playwF{
+  @include pWidth-mobile;
+}
+
+// content
+.p1, .img, .p2{
+  @include pWidth-desk;
+}
+
+.playP1, .playImg, .playP2{
+  @include pWidth-mobile;
+}
+
+.elements{
+  transition:transform 0.5s;
+  transform:translateX(0px);
+}
+
+.move-L{
+  transition:transform 0.5s;
+  transform:translateX(10px);
+}
+.play{
+  transition:transform 0.5s;
+  transform:translateX(0px);
+}
+.frame{
+  transition:transform 0.5s;
+  transform:skew(0deg, 0deg);
+}
+.skewFrame{
+  transition:transform 0.5s;
+  transform:skew(13deg, 0deg);
+}
+
+.movePlay{
+  transition:transform 0.5s;
+  transform:translateX(-34px);
+}
+
+.aloha-pixel-logo{
+  @include tablet{
+    // height: 200px;
+    width: 300px;
+  }
+
+  @include sm-mobile{
+    // height: 200px;
+    width: 200px;
+  }
+}
+
+header{
+  @include sm-mobile{
+    // height: 200px;
+    padding:0px;
+  }
+}
+
+.under, .skill {
+  @include tablet {
+    visibility: hidden;
+  }
+}
+
+#skills-graphic{
+  @include tablet{
+    height:150px;
+    // width:500px;
+  }
+  // @include mobile_device{
+  //   height:100px;
+  // }
+}
+
+.graph, .web, .digital-d{
+  @include md-tablet {
+  visibility: hidden;
+  font-family: $monte;
+  }
+}
+
+.graphic-text{
+  @include tablet {
+      @include ms-respond(font-size,-5);
+  }
+}
+
+// hide skills-graphic
+.desktop_graphic{
+  @include tablet {
+    display: none;
+  }
+}

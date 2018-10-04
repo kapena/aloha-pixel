@@ -1,0 +1,29 @@
+/* Home  Pg*/
+@import "vendor/foundation";
+@import "vendor/buttons";
+@import "partials/home/header";
+@import "partials/home/page-trans";
+/* @import "partials/home/nav"; */
+/* Projects  Pg */
+@import "partials/projects/hover";
+@import "partials/projects/layout";
+
+/* Bio  Pg */
+@import "partials/bio/skilzAni";
+@import "partials/bio/layoutBio";
+/* Conract  Pg */
+@import "partials/contact/layout-form";
+@import "partials/contact/layout-form-valid";
+@import "partials/contact/buttons";
+@import "partials/contact/error";
+@import "partials/contact/success";
+/* Prefooter  */
+@import "partials/pre-footer/prefooter-layout.scss";
+/* Footer */
+@import "partials/footer/f-layout.scss";
+/* Typeography */
+@import"partials/typography";
+/* Vendors */
+@import "vendor/lux";
+@import "vendor/normalize";
+@import "vendor/bourbon";

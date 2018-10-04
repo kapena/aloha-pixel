@@ -1,0 +1,24 @@
+header #chat{
+    @extend #projects !optional;
+}
+
+header #bio{
+    @extend #projects !optional;
+}
+
+header #getintouch{
+  @extend #projects !optional;
+}
+
+header .email{
+  @extend #projects !optional;
+}
+
+header .point-p{
+  @extend #projects !optional;
+}
+
+
+.p-p, .r, .u-r, .p-d, {
+    @extend .s-d !optional;
+}

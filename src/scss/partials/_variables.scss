@@ -1,0 +1,191 @@
+/* Modular Scale */
+@import "vendor/mod-scale";
+// Modular Scale Variables
+// 1em = 16px
+$ms-base:1em;
+// multiplyed by base to create a scale of numbers
+$ms-ratio:$golden;
+$ms-range: 1.1 10em, 1.222 20em;
+$leftside:20px;
+$img-spaceing:5px;
+
+// site-by svg height adjustment for mobile
+// media query vals
+$p321:321px;
+$p385:385px;
+$p425:425px;
+$mobile:425px;
+$p523:523px;
+$p680:680px;
+$p850:850px;
+$p1180:1180px;
+$p980:980px;
+$tablet:780px;
+$tablet-2:1030px;
+$bio-border-1000px:1000px;
+$desktop:900px;
+$proj-imgs-2sideByside-tablet:675px;
+$proj-imgs-2sideByside-sm-desktop:975px;
+$proj-img-stacked-mobile:465px;
+$desktop-lrg:1270px;
+$desktop-xl:1425px;
+$desktop-xxl:1575px;
+$desktop-xxxl:1756px;
+$img-spaceing:5px;
+// Project discription box rows
+// 6 boxes 3 rows
+$six_row_one:234px;
+$six_row_two:390px;
+$six_row_three:23px;
+// 4 boxes 2 rows
+$four-row1:234px;
+$four-row2:23px;
+
+// proj intro div padding
+$proj-intro-padding:80px 0px 0px;
+
+// margin-bottom .images
+$m-b-under-imgs:75px;
+
+/* Colors project pages */
+/* halfCircle path colors indiv project pages */
+$rect-color:silver;
+$halfCircle-opacity:0.96;
+// Secret D
+$secret-halfc:#FF503F;
+// Urban
+$urban-halfc:#0082B2;
+// Radiate
+$radiate-halfc:#00966C;
+// Print
+$print-halfc:#828282;
+// Point
+$point-halfc:#0DC3CE;
+// Royal
+$royal-halfc:#29a2a9;
+// #EB6A69
+// Eerie
+$eerie-halfc:#0081B3;
+// Tension
+$tension-halfc:#5177FF;
+// Vivd
+$vivd-halfc:#FF4669;
+/* Rectangle colors for devices small and large */
+// Secret
+$secret-rect:#FF3838;
+$secret-sm-rect:gold;
+// Point
+$point-rect:#0A3DD5;
+$point-sm-rect:#0DC3CE;
+// Urban
+$urban-rect:#0984CB; // urban-rect used on proj4
+$urban-rect-main:#6197C9; // urban-rect-main used on index
+$urban-sm-rect:#0DC3CE;
+// Radiate
+$radiate-rect:#00966C;
+$radiate-sm-rect:limegreen;
+// Print
+$print-rect:#7e7e7e;
+$print-sm-rect:gold;
+// Royal
+$royal-rect:#EB6A69; // royal-rect used on proj4
+$royal-rect-main:#29a2a9; // royal-rect-main used on index
+$royal-sm-rect:#a8f6f3;
+// Eerie
+$eerie-rect:slategrey;
+$eerie-sm-rect:#039CD8;
+// Tension
+$tension-rect:#DD76E5;
+$tension-sm-rect:#5177FF;
+// Vivd
+$vivd-rect:#FF446B;
+$vivd-sm-rect:#F6B8C0;
+/* borders */
+// The Secret of Dreaming
+$secret_capt_box:#F5423D;
+$secret_border_bottom:rgba(255, 4, 0, 0.58);
+$secret_border:2px solid red;
+$secret_capt_box-shadow:0 7px 0 yellow;
+// Radiate
+$radiate_capt_box:#00966C;
+$radiate_capt_box-shadow:0 7px 0 #32cd32;
+$radiate_capt_border:1px solid #00966C;
+$radiate_border:2px solid #00966C;
+// Urban
+$urban_capt_box-shadow:0 7px 0 #0DC3CE;
+$urban_capt_box:#006F97;
+$urban_border:2px solid cornflowerblue;
+// Print
+$print_capt_box:grey;
+$print_capt_box-shadow:0 7px 0 gold;
+$print_border:2px solid silver;
+// Royal
+$royal_border:2px solid #EB6A69;
+$royal_capt_box:lightcoral;
+$royal_capt_box-shadow:0 7px 0 yellow;
+// Eerie
+$eerie_border:2px solid #039CD8;
+$eerie_capt_box:slategrey;
+$eerie_capt-box-shadow:0 7px 0 #039CD8;
+// Tension
+$tension_border:2px solid red;
+$tension_capt_box:rgba(222, 118, 229, 0.94);
+$tension_capt-box-shadow:0 7px 0 #5177FF;
+// Vivid
+// $vivd_border:2px solid #FF4669;
+$vivd_border:2px solid #423F3F;
+$vivd_capt_box:rgba(246, 51, 92, 0.8);
+$vivd_capt_box-shadow:0 7px 0 #F6B8C0;
+
+// Main Page
+$typeColor:#333333;
+$typeColorB:#423F3F;
+$headingWeight:500;
+$other-projects:#6B6C6F;
+$projects:cyan;
+$bio:yellow;
+$cfblue:cornflowerblue;
+$chat:lime;
+$lime-green:limegreen;
+$hawaiian-blue:#1010EC;
+$hawaiian-red:#FF2A2A;
+$trop-purp:#b871f7;
+$bluesea:#00f;
+$border-top-bottom:1px solid $bluesea;
+$nav-bg-gradient:linear-gradient(steelblue -5% ,darkviolet);
+
+// animation of sliding nav
+$animation-dur:0.7s;
+// kerning on aloha text
+$padding-aloha:10px;
+// PAGE HEIGHTS
+$project-pg-height:65em;
+$about-pg-height:1300px;
+$contact-pg-height:1500px;
+
+// Rect classes on projects
+$bottom-rect:btm--;
+$top-rect:top--;
+
+// Nav
+$text:#002b36; // charcoal
+$circleNav:#373D45; // circle nav button
+$circleNav2:#37535A;
+$circleNav3:#51585A;
+$nav-link-bgColor:#1bacf1 no-repeat bottom;
+
+// Other colors
+$sand:#fff5ee; // page color
+$color-1: #243040; // Ebony Clay
+$color-2: #9cb3a8; // Pewter
+$color-3: #ffffff; // White
+$color-4: #D7E1DC; // OffCyan
+
+// Footer
+$footer_social:#e0e0e0;
+$footer_nav:silver;
+$aloha_goodbye:seashell;
+
+$bottom_line:0 7px 0 rgb(252, 242, 73);
+// Radius of Circles on smaller screens
+// $r:60;

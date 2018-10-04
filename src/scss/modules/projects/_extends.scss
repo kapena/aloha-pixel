@@ -1,0 +1,38 @@
+
+.projects-link,.about,.contact-link,.blog {
+    @extend .home !optional;
+}
+
+
+:hover.box_2,:hover.box_3,:hover.box_4,:hover.box_5{
+    @extend :hover.box_1 !optional;
+}
+
+.box_2,.box_3,.box_4,.box_5,.box_6{
+    @extend .box_1 !optional;
+}
+
+// .image2-container,.image3-container,.image4-container{
+//     @extend .image1-container;
+// }
+
+.discript2,.discript3,.discript4,.discript5,.discript6{
+    @extend .discript1 !optional;
+}
+
+.disp2,.disp3,.disp4,.disp5,.disp6{
+    @extend .disp1 !optional;
+}
+
+.caption2,.caption3,.caption4,.caption5,.caption6{
+    @extend .caption1 !optional;
+}
+
+.social3-in,.social4-twitter,.social5-behance{
+    @extend .social1-gh !optional;
+}
+
+
+.google,.linkedin,.twitter,.behance{
+    @extend .github !optional;
+}

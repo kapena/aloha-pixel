@@ -1,0 +1,20 @@
+@import "modules/projects-page/projects-module"; // animation
+@import "modules/global-mqs/mqs"; // media q
+@import "partials/variables";
+
+.projects:hover .fullRect{
+    visibility: visible;
+    opacity: 0.7;
+    @include fadein-halfCircle1-on-hover;
+}
+
+.projects:hover .view-icon{
+  opacity:1;
+   @include fadein-halfCircle1-on-hover;
+}
+
+.card, .p-card:hover{
+  // background-color:#c9c9c9;
+  transition:box-shadow 0.4s;
+  box-shadow:0px 10px 10px 0px rgba(0,0,0,.12);
+}

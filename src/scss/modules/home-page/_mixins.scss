@@ -1,0 +1,39 @@
+
+/* Padding mixin for links inside paragraph*/
+@mixin left-right-bottom-links($left-right:2px, $bottom:1px){
+    padding-left: $left-right;
+    padding-right: $left-right;
+    padding-bottom:$bottom;
+}
+
+/* Pushing intro-msg margins in closer */
+@mixin left-right-margin($margins:0% 8% 0%){
+    margin:$margins;
+}
+
+@mixin svg-line-divider {
+    width:100%;
+    position: relative;
+}
+
+@mixin page-headings{
+    text-align: center;
+    position: relative;
+    font-weight:$montB;
+    font-family: $monte;
+    color:$typeColorB;
+    @include ms-respond(font-size,4);
+}
+
+
+@mixin hover-links {
+    border:none;
+    border-bottom: 2px solid royalblue;
+    // #7b29c9
+    background:-webkit-linear-gradient(royalblue, royalblue) no-repeat bottom;
+    background:-o-linear-gradient(royalblue, royalblue) no-repeat bottom;
+    background:linear-gradient(royalblue, royalblue) no-repeat bottom;
+    background-size:100% 1px;
+    transition: .2s,color .1s .1s;
+    text-decoration:none;
+}

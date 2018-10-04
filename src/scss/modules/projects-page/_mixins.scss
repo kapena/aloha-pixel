@@ -1,0 +1,18 @@
+// animation for web graphic on hover
+@mixin pWidth-desk {
+  transition:all 0.5s;
+  -webkit-transition:all 0.5s;
+  font-size:100px;
+}
+@mixin pWidth-mobile {
+  transition: 0.5s;
+  -webkit-transition:all 0.5s;
+  transition:all 0.5s;
+  font-size:60px;
+}
+
+// fade in halfCircle1
+@mixin fadein-halfCircle1-on-hover {
+    @include transition(opacity 1s);
+    @include transition-duration(0.8s);
+}

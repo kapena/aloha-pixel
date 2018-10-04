@@ -1,0 +1,40 @@
+{
+  "name": "hisrc",
+  "main": "./hisrc.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.7.0"
+  },
+  "homepage": "https://github.com/teleject/hisrc",
+  "authors": [
+    "Christopher Schmitt <schmitt@christopher.org>",
+    "Marc Grabanski <marc@mjg.in>",
+    "Christopher Deutsch <cd@makerocketgonow.com>"
+  ],
+  "description": "FitVids makes video embeds responsive",
+  "keywords": [
+    "hisrc",
+    "Responsive",
+    "RWD",
+    "adaptive",
+    "images"
+  ],
+  "license": "MIT",
+  "_release": "6d7acb099a",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "6d7acb099ad12066625c92b473493ad5ff255261"
+  },
+  "_source": "https://github.com/teleject/hisrc.git",
+  "_target": "*",
+  "_originalSource": "hisrc",
+  "_direct": true
+}

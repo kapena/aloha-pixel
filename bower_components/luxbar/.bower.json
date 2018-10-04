@@ -1,0 +1,33 @@
+{
+  "name": "luxbar",
+  "version": "0.3.2",
+  "homepage": "https://balzss.github.io/luxbar",
+  "authors": [
+    "balzss <balazs.saros@gmail.com>"
+  ],
+  "description": "Featherweight, Responsive, CSS Only Navigation Bar",
+  "main": "build/luxbar.css",
+  "keywords": [
+    "css",
+    "navbar",
+    "navigation bar",
+    "navigation",
+    "menu"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "*",
+    "!build/*",
+    "!LICENSE"
+  ],
+  "_release": "0.3.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.3.2",
+    "commit": "c76340022d548e59a21cf3e7fe2119508a38ea0c"
+  },
+  "_source": "https://github.com/balzss/luxbar.git",
+  "_target": "^0.3.2",
+  "_originalSource": "luxbar",
+  "_direct": true
+}
