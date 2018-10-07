@@ -104,9 +104,6 @@ position: relative;
   @include ms-respond(font-size,1);
 }
 
-// .main{
-//   padding:20px 0px 0px;
-// }
 
 header #projects:hover,
 header #projects:focus {
@@ -258,12 +255,12 @@ header #projects:focus{
 
 .aloha-pixel-logo{
   @include tablet{
-    // height: 200px;
+    height: 200px;
     width: 300px;
   }
 
   @include sm-mobile{
-    // height: 200px;
+    height: 200px;
     width: 200px;
   }
 }
@@ -286,9 +283,6 @@ header{
     height:150px;
     // width:500px;
   }
-  // @include mobile_device{
-  //   height:100px;
-  // }
 }
 
 .graph, .web, .digital-d{

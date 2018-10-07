@@ -3399,10 +3399,12 @@ header #projects:focus, header #chat:focus, header #bio:focus, header #getintouc
 
 @media only screen and (max-width: 780px) {
   .aloha-pixel-logo {
+    height: 200px;
     width: 300px; } }
 
 @media only screen and (max-width: 385px) {
   .aloha-pixel-logo {
+    height: 200px;
     width: 200px; } }
 
 @media only screen and (max-width: 385px) {
@@ -4385,7 +4387,8 @@ li {
 
 #home, #projects, header #chat, header #bio, header #getintouch, header .email, header .point-p, .pre-footer #chat, .pre-footer #bio, #about, #contact, #blog {
   color: #333333;
-  text-decoration: none; }
+  text-decoration: none;
+  font-weight: 900; }
 
 .footer-area {
   display: flex;
