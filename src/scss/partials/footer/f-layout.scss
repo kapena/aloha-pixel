@@ -11,6 +11,7 @@ li{
 }
 
 #home,#projects,#about,#contact,#blog{
+    color:$typeColor;
     text-decoration: none;
 }
 
@@ -39,7 +40,7 @@ li{
 }
 
 .home:hover{
-    color:#fff;
+    color:#6942ca;
 }
 
 .home{

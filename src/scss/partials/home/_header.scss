@@ -293,7 +293,7 @@ header{
 
 .graph, .web, .digital-d{
   @include md-tablet {
-  visibility: hidden;
+  // visibility: hidden;
   font-family: $monte;
   }
 }

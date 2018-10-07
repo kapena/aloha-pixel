@@ -3419,7 +3419,6 @@ header #projects:focus, header #chat:focus, header #bio:focus, header #getintouc
 
 @media only screen and (max-width: 850px) {
   .graph, .web, .digital-d {
-    visibility: hidden;
     font-family: "Montserrat", sans-serif; } }
 
 @media only screen and (max-width: 780px) {
@@ -4385,6 +4384,7 @@ li {
   list-style: none; }
 
 #home, #projects, header #chat, header #bio, header #getintouch, header .email, header .point-p, .pre-footer #chat, .pre-footer #bio, #about, #contact, #blog {
+  color: #333333;
   text-decoration: none; }
 
 .footer-area {
@@ -4409,7 +4409,7 @@ li {
   text-decoration: none; }
 
 .home:hover, .projects-link:hover, .about:hover, .contact-link:hover, .blog:hover {
-  color: #fff; }
+  color: #6942ca; }
 
 .home, .projects-link, .about, .contact-link, .blog {
   color: black;
