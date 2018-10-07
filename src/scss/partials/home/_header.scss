@@ -255,11 +255,13 @@ header #projects:focus{
 
 .aloha-pixel-logo{
   @include tablet{
+    display: flex;
     height: 200px;
     width: 300px;
   }
 
   @include sm-mobile{
+    display: flex;
     height: 200px;
     width: 200px;
   }
