@@ -18,6 +18,7 @@
                 "bower_components/jquery/dist/jquery.min.js",
                 "bower_components/smoothstate/src/jquery.smoothState.js",
                 "src/js/pages/pagetras.js",
+                "src/js/pages/scroll.js",
                 "src/js/modernizr.min.js",
                 "bower_components/Snap.svg/dist/snap.svg-min.js",
                 "src/js/pages/home.js",
@@ -26,6 +27,10 @@
 
             "particles": {
               "js":"site/js/particle.js"
+            },
+
+            "scroll": {
+              "js":"site/js/scroll.js"
             },
 
             "project_pgs_src":{
@@ -87,6 +92,9 @@
 
         "particles_dest":{
           "js_particles":"site/js"
+        },
+        "scroll_dest":{
+          "js_scroll":"site/js"
         },
 
         "blog_dest":{

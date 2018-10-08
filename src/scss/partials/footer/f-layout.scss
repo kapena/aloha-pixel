@@ -36,20 +36,14 @@ li{
 .home,.proj,.about,.cont,.blog{
     font-family: $monte;
     text-decoration: none;
-    //padding-top:5px;
-    @include link-hover-footer;
+    padding:10px;
 }
 
-.home:hover{
-    color:#6942ca;
+.navlink:hover{
+  color:#fefefe;
 }
 
-.home{
-    color:black;
-    font-weight: 900;
-}
-
-.home{
+.footerlink:hover{
     @include link-hover-footer;
 }
 

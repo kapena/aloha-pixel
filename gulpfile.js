@@ -123,6 +123,22 @@ gulp.task('particles_task', function(){
   browserSync.reload();
 });
 
+// Particle
+gulp.task('scroll_task', function(){
+  return gulp.src(paths.source.scroll.js)
+  .pipe(plumber({errorHandler: onError}))
+      // plumber finds errors in stream and
+      // notifys me in terminal
+  .pipe(gulp.dest(paths.scroll_dest.js_scroll)) // save in dest
+  .pipe(uglify()) // minify js
+  .pipe(rename({ // rename with file with .min
+      suffix:'.min'
+  }))
+  .pipe(gulp.dest(paths.main_dest.js_main))
+  .pipe(notify({ message: 'scroll task finished'})),
+  browserSync.reload();
+});
+
 // Styles Main
 gulp.task('styles_main_task',function(){
     return gulp.src(paths.source.main_page_source.styles_main)

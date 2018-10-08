@@ -3174,6 +3174,7 @@ header {
 
 .aloha-pixel-logo {
   display: flex;
+  display: flex;
   width: 400px;
   top: 60px;
   position: relative; }
@@ -3211,6 +3212,11 @@ header {
 
 .slide-nav-trigger {
   visibility: hidden; }
+
+#work-spectrum, .work {
+  position: absolute;
+  bottom: -200px;
+  height: 300px; }
 
 .show {
   transition: opacity 0.2s;
@@ -3399,17 +3405,19 @@ header #projects:focus, header #chat:focus, header #bio:focus, header #getintouc
 
 @media only screen and (max-width: 780px) {
   .aloha-pixel-logo {
-    height: 200px;
+    display: flex;
+    height: 300px;
     width: 300px; } }
 
 @media only screen and (max-width: 385px) {
   .aloha-pixel-logo {
-    height: 200px;
-    width: 200px; } }
+    display: flex;
+    height: 220px;
+    width: 250px; } }
 
 @media only screen and (max-width: 385px) {
   header {
-    padding: 0px; } }
+    padding: 0px 0px 50px; } }
 
 @media only screen and (max-width: 780px) {
   .under, .skill {
@@ -4408,17 +4416,13 @@ li {
 .home, .projects-link, .about, .contact-link, .blog, .proj, .about, .cont, .blog {
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
-  padding: 0rem 1rem 0rem;
-  text-decoration: none; }
+  padding: 10px; }
 
-.home:hover, .projects-link:hover, .about:hover, .contact-link:hover, .blog:hover {
-  color: #6942ca; }
+.navlink:hover {
+  color: #fefefe; }
 
-.home, .projects-link, .about, .contact-link, .blog {
-  color: black;
-  font-weight: 900; }
-
-.home, .projects-link, .about, .contact-link, .blog {
+.footerlink:hover {
+  color: #4767da;
   padding: 0rem 1rem 0rem;
   text-decoration: none; }
 

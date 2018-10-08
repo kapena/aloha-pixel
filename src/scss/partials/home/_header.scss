@@ -38,9 +38,8 @@ position: relative;
 
 .aloha-pixel-logo{
   display: flex;
-  // padding:0 50px 0px;
-  // margin: 0 auto;
-  // height:300px;
+  // height: 200px;
+  display: flex;
   width:400px;
   top: 60px;
   position: relative;
@@ -71,6 +70,12 @@ position: relative;
 
 .slide-nav-trigger{
   visibility: hidden;
+}
+
+#work-spectrum, .work{
+  position: absolute;
+  bottom: -200px;
+  height: 300px;
 }
 
 .show{
@@ -256,21 +261,21 @@ header #projects:focus{
 .aloha-pixel-logo{
   @include tablet{
     display: flex;
-    height: 200px;
+    height: 300px;
     width: 300px;
   }
 
   @include sm-mobile{
     display: flex;
-    height: 200px;
-    width: 200px;
+    height: 220px;
+    width: 250px;
   }
 }
 
 header{
   @include sm-mobile{
     // height: 200px;
-    padding:0px;
+    padding:0px 0px 50px;
   }
 }
 

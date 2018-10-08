@@ -9102,6 +9102,7 @@ li {
 .home, .projects-link, .about, .contact-link, .blog, .projects, .about, .contact, .blog {
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
+  color: #4767da;
   padding: 0rem 1rem 0rem;
   text-decoration: none; }
 
@@ -9113,6 +9114,7 @@ li {
   font-weight: 900; }
 
 .home, .projects-link, .about, .contact-link, .blog {
+  color: #4767da;
   padding: 0rem 1rem 0rem;
   text-decoration: none; }
 
