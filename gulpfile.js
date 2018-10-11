@@ -79,7 +79,7 @@ gulp.watch(paths.watcher_main.js_main,['js_main_task']);
 gulp.watch(paths.watcher_main.styles_main,['styles_main_task']);
 
 // project 2 styles
-gulp.watch(paths.watcher_projects.watcher_proj11.styles_proj11,['proj11_styles']);
+// gulp.watch(paths.watcher_projects.watcher_proj2.styles_proj2,['proj2_styles']);
 
 
 // watch main page html
@@ -164,23 +164,23 @@ gulp.task('styles_main_task',function(){
 // Project Styles Task Injection
 // Change paths to desired project when working on css for that project
 // paths.source.project_pgs_src.proj_#.styles_proj#
-gulp.task('proj11_styles',function(){
-    // source to project 11 scss
-    return gulp.src(paths.source.project_pgs_src.proj_11.styles_proj11)
+gulp.task('proj2_styles',function(){
+    // source to project 2 scss
+    return gulp.src(paths.source.project_pgs_src.proj_2.styles_proj2)
     .pipe(plumber({
         // plumber finds errors in stream
         errorHandler: onError}))
     .pipe(sourcemaps.init()) // source maps
     .pipe(sass())
-    .pipe(gulp.dest(paths.project_pages_dest.proj11_dest.styles_proj11))
+    .pipe(gulp.dest(paths.project_pages_dest.proj2_dest.styles_proj2))
     .pipe(cssmin()) // min css
     .pipe(rename({ // rename file to site.min.css
         suffix:'.min'
     }))
-    // destination for compiled css for project 11
+    // destination for compiled css for project 2
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(paths.project_pages_dest.proj11_dest.styles_proj11))
-    .pipe(notify({ message: 'proj11_styles task finished' }))
+    .pipe(gulp.dest(paths.project_pages_dest.proj2_dest.styles_proj2))
+    .pipe(notify({ message: 'proj2_styles task finished' }))
     .pipe(browserSync.stream());
 });
 
@@ -195,5 +195,5 @@ gulp.task('main',function(){
 gulp.task('project_styles',function(){
     // call runSequence to make sure our tasks are
     // assign project page #
-    runSequence('proj11_styles','sync');
+    // runSequence('proj2_styles','sync');
 });

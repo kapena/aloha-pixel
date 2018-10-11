@@ -54,6 +54,10 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700,900");
 @import url("https://fonts.googleapis.com/css?family=Lora:400,700");
 @import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400i");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300i,400,400i,600,900i");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,900");
+@import url("https://fonts.googleapis.com/css?family=Lora:400,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400i");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -3480,7 +3484,193 @@ header #projects:focus, header #chat:focus, header #bio:focus, header #getintouc
   .main-scene.is-exiting .scene_element {
     animation-direction: alternate-reverse; }
 
-/* @import "partials/home/nav"; */
+/*  mixins, extends and colors inside home_module */
+/* Here I import all my modules into the home-module */
+/* Padding mixin for links inside paragraph*/
+/* Pushing intro-msg margins in closer */
+/* Modular Scale */
+/* Colors project pages */
+/* halfCircle path colors indiv project pages */
+/* Rectangle colors for devices small and large */
+/* borders */
+/**** Google Fonts ****/
+/* Lato Variables */
+/* Base Size */
+/**** Responsive Scales ****/
+p {
+  font-family: "Lato", "serif";
+  color: #423F3F;
+  line-height: 1.5em; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  color: #423F3F; }
+
+h2 {
+  font-weight: 400;
+  font-style: italic; }
+
+.luxbar-fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+
+.aboutlink {
+  position: relative;
+  top: 1000px; }
+
+.pixelblok {
+  height: 35px;
+  font-size: 1.6em; }
+
+#rect1, #rect3 {
+  transition: transform 0.2s; }
+
+.movedown1 {
+  transition: transform 0.3s;
+  transform: translateY(-15px); }
+
+.movedown3 {
+  transition: transform 0.3s;
+  transform: translateY(15px); }
+
+.luxbar-brand {
+  font-size: 1.6em; }
+
+.luxbar-menu-right, .luxbar-header {
+  margin-right: auto; }
+
+.luxbar-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 58px; }
+
+.home, .projects-link, .about, .contact-link, .blog, .proj, .about, .cont, .blog {
+  font-family: lato;
+  text-decoration: none;
+  padding: 10px; }
+
+.navlink:hover {
+  color: #fefefe; }
+
+.luxbar-menu {
+  min-height: 58px;
+  width: 100%; }
+
+.luxbar-navigation {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding-left: 0;
+  margin: 0; }
+
+.hamburger {
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  padding: 10px; }
+
+.luxbar-item a {
+  padding: 18px 24px 18px 24px;
+  display: block; }
+  .luxbar-item a .lubar-item {
+    height: 58px; }
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    visibility: visible; }
+  .luxbar-item {
+    display: none; } }
+
+/******* default light *******/
+.luxbar-menu-light,
+.luxbar-menu-light .dropdown ul {
+  background-color: #e0e0e0;
+  color: #212121; }
+
+.luxbar-menu-light .active,
+.luxbar-menu-light .luxbar-item:hover {
+  background-color: #6686e6; }
+
+/******* slide nav *******/
+/* Varaibles */
+/* Primary Styles */
+a {
+  color: #333333;
+  text-decoration: none;
+  list-style: none; }
+
+/* Main Components Most Styling*/
+/* Nest 1
+two top level divs in the HTML
+1 slide-nav
+2 slide-navigation-wrapper
+*/
+.slide-nav {
+  opacity: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 70%;
+  background: linear-gradient(#515cd5, #6a41ca);
+  visibility: hidden;
+  transition: visibility 0s 0.7s; }
+  .slide-nav .slide-navigation-wrapper {
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 60px;
+    transition: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateX(-50%);
+    transition: transform 0.7s;
+    transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78); }
+  .navigation-is-open .slide-nav {
+    visibility: visible;
+    transition: visibility 0s 0s; }
+    .navigation-is-open .slide-nav .slide-navigation-wrapper {
+      transform: translateX(0);
+      transition: transform 0.5s;
+      transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78); }
+
+/* Nest 2
+slide-nav div
+#title id of h2
+*/
+#title {
+  font-family: "Lato", "serif";
+  position: relative;
+  font-size: 1.5em;
+  font-weight: 900;
+  color: #fefefe; }
+
+/* Nest 3
+<ul> sde-primary-nav
+<a> links
+*/
+.slide-nav .slide-primary-nav {
+  padding: 0; }
+  .slide-nav .slide-primary-nav li {
+    list-style: none;
+    margin: 1.6em 0; }
+  .slide-nav .slide-primary-nav a {
+    font-family: "Lato", "serif";
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.6);
+    display: inline-block; }
+    .slide-nav .slide-primary-nav a.selected {
+      color: #333333; }
+    .no-touch .slide-nav .slide-primary-nav a:hover {
+      color: #fefefe; }
+
 /* Projects  Pg */
 /* Modular Scale */
 /* Colors project pages */
@@ -4492,329 +4682,6 @@ h2 {
   font-style: italic; }
 
 /* Vendors */
-.luxbar-default {
-  width: 100%;
-  position: relative;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
-
-.luxbar-static {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0; }
-
-.luxbar-static .luxbar-checkbox:checked ~ .luxbar-menu {
-  position: absolute; }
-
-.luxbar-fixed {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
-
-.luxbar-fixed-bottom {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
-
-.luxbar-hamburger span, .luxbar-hamburger span::before, .luxbar-hamburger span::after {
-  display: block;
-  height: 2px;
-  width: 26px;
-  transition: 0.6s ease; }
-
-.luxbar-checkbox:checked ~ .luxbar-menu li .luxbar-hamburger span {
-  background-color: transparent; }
-
-.luxbar-checkbox:checked ~ .luxbar-menu li .luxbar-hamburger span::before, .luxbar-checkbox:checked ~ .luxbar-menu li .luxbar-hamburger span::after {
-  margin-top: 0; }
-
-.luxbar-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 58px; }
-
-.luxbar-menu-left .luxbar-navigation, .luxbar-menu-left .luxbar-header {
-  justify-content: flex-start; }
-
-.luxbar-menu-right .luxbar-hamburger {
-  margin-left: auto; }
-
-.luxbar-brand {
-  font-size: 1.6em; }
-
-.luxbar-menu {
-  min-height: 58px;
-  transition: 0.6s ease;
-  width: 100%; }
-
-.luxbar-navigation {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding-left: 0;
-  margin: 0; }
-
-.luxbar-menu a,
-.luxbar-item a {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer; }
-
-.luxbar-item {
-  height: 58px; }
-
-.luxbar-item a {
-  padding: 18px 24px 18px 24px;
-  display: block; }
-
-.luxbar-hamburger {
-  padding: 18px 24px 18px 24px;
-  position: relative;
-  cursor: pointer; }
-
-.luxbar-hamburger span::before, .luxbar-hamburger span::after {
-  content: '';
-  position: absolute; }
-
-.luxbar-hamburger span::before {
-  margin-top: -8px; }
-
-.luxbar-hamburger span::after {
-  margin-top: 8px; }
-
-.luxbar-checkbox {
-  display: none; }
-
-.luxbar-checkbox:not(:checked) ~ .luxbar-menu {
-  overflow: hidden;
-  height: 58px; }
-
-.luxbar-checkbox:checked ~ .luxbar-menu {
-  transition: height 0.6s ease;
-  height: 100vh;
-  overflow: auto; }
-
-.dropdown {
-  position: relative;
-  height: auto;
-  min-height: 58px; }
-
-.dropdown:hover > ul {
-  position: relative;
-  display: block;
-  min-width: 100%; }
-
-.dropdown > a::after {
-  position: absolute;
-  content: '';
-  right: 10px;
-  top: 25px;
-  border-width: 5px 5px 0;
-  border-color: transparent;
-  border-style: solid; }
-
-.dropdown > ul {
-  display: block;
-  overflow-x: hidden;
-  list-style: none;
-  padding: 0; }
-
-.dropdown > ul .luxbar-item {
-  min-width: 100%;
-  height: 29px;
-  padding: 5px 10px 5px 40px; }
-
-.dropdown > ul .luxbar-item a {
-  min-height: 29px;
-  line-height: 29px;
-  padding: 0; }
-
-@media screen and (min-width: 768px) {
-  .luxbar-navigation {
-    flex-flow: row;
-    justify-content: flex-end; }
-  .luxbar-hamburger {
-    display: none; }
-  .luxbar-checkbox:not(:checked) ~ .luxbar-menu {
-    overflow: visible; }
-  .luxbar-checkbox:checked ~ .luxbar-menu {
-    height: 58px; }
-  .luxbar-menu .luxbar-item {
-    border-top: 0; }
-  .luxbar-menu-right .luxbar-header {
-    margin-right: auto; }
-  .dropdown {
-    height: 58px; }
-  .dropdown:hover > ul {
-    position: absolute;
-    left: 0;
-    top: 58px;
-    padding: 0; }
-  .dropdown > ul {
-    display: none; }
-  .dropdown > ul .luxbar-item {
-    padding: 5px 10px; }
-  .dropdown > ul .luxbar-item a {
-    white-space: nowrap; } }
-
-.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-doublespin span::before {
-  transform: rotate(225deg); }
-
-.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-doublespin span::after {
-  transform: rotate(-225deg); }
-
-.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-spin span::before {
-  transform: rotate(45deg); }
-
-.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-spin span::after {
-  transform: rotate(-45deg); }
-
-/******* color variables *******/
-/******* default dark *******/
-.luxbar-menu-dark,
-.luxbar-menu-dark .dropdown ul {
-  background-color: #212121;
-  color: #fff; }
-
-.luxbar-menu-dark .active,
-.luxbar-menu-dark .luxbar-item:hover {
-  background-color: #424242; }
-
-.luxbar-menu-dark .luxbar-hamburger span,
-.luxbar-menu-dark .luxbar-hamburger span::before,
-.luxbar-menu-dark .luxbar-hamburger span::after {
-  background-color: #fff; }
-
-/******* default light *******/
-.luxbar-menu-light,
-.luxbar-menu-light .dropdown ul {
-  background-color: #e0e0e0;
-  color: #212121; }
-
-.luxbar-menu-light .active,
-.luxbar-menu-light .luxbar-item:hover {
-  background-color: #6686e6; }
-
-.luxbar-menu-light .luxbar-hamburger span,
-.luxbar-menu-light .luxbar-hamburger span::before,
-.luxbar-menu-light .luxbar-hamburger span::after {
-  background-color: #212121; }
-
-/******* default material-red *******/
-.luxbar-menu-material-red,
-.luxbar-menu-material-red .dropdown ul {
-  background-color: #b71c1c;
-  color: #fff; }
-
-.luxbar-menu-material-red .active,
-.luxbar-menu-material-red .luxbar-item:hover {
-  background-color: #c62828; }
-
-.luxbar-menu-material-red .luxbar-hamburger span,
-.luxbar-menu-material-red .luxbar-hamburger span::before,
-.luxbar-menu-material-red .luxbar-hamburger span::after {
-  background-color: #fff; }
-
-/******* default material-indigo *******/
-.luxbar-menu-material-indigo,
-.luxbar-menu-material-indigo .dropdown ul {
-  background-color: #1a237e;
-  color: #fff; }
-
-.luxbar-menu-material-indigo .active,
-.luxbar-menu-material-indigo .luxbar-item:hover {
-  background-color: #283593; }
-
-.luxbar-menu-material-indigo .luxbar-hamburger span,
-.luxbar-menu-material-indigo .luxbar-hamburger span::before,
-.luxbar-menu-material-indigo .luxbar-hamburger span::after {
-  background-color: #fff; }
-
-/******* default material-green *******/
-.luxbar-menu-material-green,
-.luxbar-menu-material-green .dropdown ul {
-  background-color: #1b5e20;
-  color: #fff; }
-
-.luxbar-menu-material-green .active,
-.luxbar-menu-material-green .luxbar-item:hover {
-  background-color: #2e7d32; }
-
-.luxbar-menu-material-green .luxbar-hamburger span,
-.luxbar-menu-material-green .luxbar-hamburger span::before,
-.luxbar-menu-material-green .luxbar-hamburger span::after {
-  background-color: #fff; }
-
-/******* default material-amber *******/
-.luxbar-menu-material-amber,
-.luxbar-menu-material-amber .dropdown ul {
-  background-color: #ff6f00;
-  color: #fff; }
-
-.luxbar-menu-material-amber .active,
-.luxbar-menu-material-amber .luxbar-item:hover {
-  background-color: #ff8f00; }
-
-.luxbar-menu-material-amber .luxbar-hamburger span,
-.luxbar-menu-material-amber .luxbar-hamburger span::before,
-.luxbar-menu-material-amber .luxbar-hamburger span::after {
-  background-color: #fff; }
-
-/******* default material-brown *******/
-.luxbar-menu-material-brown,
-.luxbar-menu-material-brown .dropdown ul {
-  background-color: #3e2723;
-  color: #fff; }
-
-.luxbar-menu-material-brown .active,
-.luxbar-menu-material-brown .luxbar-item:hover {
-  background-color: #4e342e; }
-
-.luxbar-menu-material-brown .luxbar-hamburger span,
-.luxbar-menu-material-brown .luxbar-hamburger span::before,
-.luxbar-menu-material-brown .luxbar-hamburger span::after {
-  background-color: #fff; }
-
-/******* default material-bluegrey *******/
-.luxbar-menu-material-bluegrey,
-.luxbar-menu-material-bluegrey .dropdown ul {
-  background-color: #263238;
-  color: #fff; }
-
-.luxbar-menu-material-bluegrey .active,
-.luxbar-menu-material-bluegrey .luxbar-item:hover {
-  background-color: #37474f; }
-
-.luxbar-menu-material-bluegrey .luxbar-hamburger span,
-.luxbar-menu-material-bluegrey .luxbar-hamburger span::before,
-.luxbar-menu-material-bluegrey .luxbar-hamburger span::after {
-  background-color: #fff; }
-
-/******* default material-cyan *******/
-.luxbar-menu-material-cyan,
-.luxbar-menu-material-cyan .dropdown ul {
-  background-color: #006064;
-  color: #fff; }
-
-.luxbar-menu-material-cyan .active,
-.luxbar-menu-material-cyan .luxbar-item:hover {
-  background-color: #00838f; }
-
-.luxbar-menu-material-cyan .luxbar-hamburger span,
-.luxbar-menu-material-cyan .luxbar-hamburger span::before,
-.luxbar-menu-material-cyan .luxbar-hamburger span::after {
-  background-color: #fff; }
-
-/*# sourceMappingURL=luxbar.css.map */
 /* ==========================================================================
    Normalize.scss settings
    ========================================================================== */

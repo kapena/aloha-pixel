@@ -2,181 +2,240 @@
 @import "modules/home-page/home-module";
 @import "partials/variables";
 @import "partials/typography";
-@import "vendor/bourbon";
 
+.luxbar-fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
-// Nav button
-.slide-nav-trigger{
-    position: fixed;
-    z-index: 3;
-    left:5%;
-    top:20px;
-    height:64px;
-    width:64px;
-    border-radius: 50%;
-    background-color:$circleNav;
-    opacity: 0;
-    // visibility: hidden;
+.aboutlink{
+	position:relative;
+	top:1000px;
+}
+.pixelblok {
+	height:35px;
+	font-size: 1.6em;
 }
 
-.show{
-    opacity: 1;
-    @include transition(opacity 1s ease-in-out);
+#rect1, #rect3 {
+	transition:transform 0.2s;
 }
 
-#one, #two, #three{
-    mix-blend-mode:screen;
+.movedown1{
+transition:transform 0.3s;
+transform:translateY(-15px);
 }
 
-/* Main Components Most of Styling*/
+.movedown3{
+transition:transform 0.3s;
+transform:translateY(15px);
+}
+
+.luxbar-brand {
+  font-size: 1.6em;
+}
+
+.luxbar-menu-right, .luxbar-header {
+  margin-right: auto; }
+
+.luxbar-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 58px; }
+
+.home,.proj,.about,.cont,.blog{
+    font-family:lato;
+    text-decoration: none;
+    padding:10px;
+}
+
+.navlink:hover{
+  color:#fefefe;
+}
+
+
+.luxbar-menu {
+  min-height: 58px;
+  width: 100%; }
+
+.luxbar-navigation {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding-left: 0;
+  margin: 0; }
+
+.hamburger {
+	visibility: hidden;
+	display:flex;
+	align-items:center;
+  padding:10px;
+}
+  .luxbar-item a {
+    padding: 18px 24px 18px 24px;
+    display: block;
+
+		.lubar-item{
+			height:58px;
+		}
+}
+
+
+@media screen and (max-width: 768px) {
+.hamburger {
+	visibility: visible;
+}
+	.luxbar-item{
+		display:none;
+	}
+}
+/******* default light *******/
+.luxbar-menu-light,
+.luxbar-menu-light .dropdown ul {
+  background-color: #e0e0e0;
+  color: #212121; }
+
+.luxbar-menu-light .active,
+.luxbar-menu-light .luxbar-item:hover {
+  background-color: #6686e6;
+}
+
+/******* slide nav *******/
+
+/* Varaibles */
+// Mod scale
+$ms-base: 1em;
+$ms-ratio: 1.5;
+// animation
+$animation-duration:0.7s;
+// colors
+$color-1: #243040; // Ebony Clay
+$color-2: #333333; // Dark
+$color-3: #ffffff; // White
+$color-4:#f4f4f4; // OffCyan
+
+
+/* Primary Styles */
+a{
+	color: $color-2;
+	text-decoration: none;
+	 list-style: none;
+}
+
+// nav button circl
+
+/* Main Components Most Styling*/
 
 /* Nest 1
-slide-nav
-slide-navigation-wrapper
+two top level divs in the HTML
+1 slide-nav
+2 slide-navigation-wrapper
 */
 
-.slide-nav{
-    position: fixed;
-    z-index: 1;
-    top:0;
-    left:0;
-    height:100%;
-    width:100%;
-    display: block;
-    // background-color:$circleNav;
-    @include background($nav-bg-gradient);
-    // visibility: hidden;
-    // @include transition(visibility 0s $animation-dur);
-
-    .slide-navigation-wrapper{
-        // main navigation content here
-        height:100%;
-        overflow-y: auto;
-        overflow-scrolling:touch;
-        // padds links over to the left
-        padding:40px 5% 40px calc(10% + 80px);
-        // Force Hard W acceleration webkit
-        @include transition(translateZ(0));
-        backface-visibility:hidden;
-        // transform links on X axis -50% hidden off screen!
-        @include transform(translateX(-50%));
-        // transition timing function makes the animation smooth
-        @include transition-timing-function(cubic-bezier(.86,.01,.77,.78));
-    }
-
-    .navigation-is-open & {
-        visibility: visible;
-        .slide-navigation-wrapper{
-            // transition translate on the X axis `0`
-            @include transform(translateX(0));
-            // transition-duration: 0.3s;
-            @include transition(0.5s);
-        }
-    }
-}
 
 .slide-nav{
-    opacity:0;
-}
+	opacity:0;
+	position: fixed;
+	z-index:1;
+	top:0;
+	left:0;
+	height:100%;
+	width:70%;
+	background:linear-gradient(#515cd5, #6a41ca);
+	visibility: hidden;
+	transition: visibility 0s $animation-duration;
 
-// fade in bg when jQ triggers class animate-opacity
-.animate-o-open{
-    transition:opacity 0.8s ease;
-    opacity:1;
-}
 
-.animate-o-close{
-    transition:opacity 0.8s ease;
-    opacity:0;
-    // visibility: visible;
-}
+	// child to top level
+	.slide-navigation-wrapper{
+		// main navigation content here
+		height:100%;
+		overflow-y:auto;
+		-webkit-overflow-scrolling:touch;
+		// padds links over to the left
+		//padding:40px 5% 40px calc(5% + 80px);
+		// padding:80px 10px 10px 80px;
+    padding:60px;
+		// Force Hard W acceleration in WebKit
+		//@include transition(translateZ(0));
+		transition: translateZ(0);
+		-webkit-backface-visibility:hidden;
+		backface-visibility:hidden;
+		// transform links on X axis -50% hidden off screen!
+		transform: translateX(-50%);
+		// transition the transformation
+		transition: (transform $animation-duration);
+		// transition timing function makes the animation smooth
+		transition-timing-function:cubic-bezier(.86,.01,.77,.78);
+	}
 
-.animate-o-close-link{
-    transition:opacity 0.8s ease;
-    opacity:0;
-    // visibility: visible;
+	// adding new class and assigning our parent selector `slide-nav` with `&` selector
+	// when nav is clicked on fire this class
+	.navigation-is-open & {
+		visibility: visible;
+		// @include transition(visibility 0s 0s);
+		transition: visibility 0s 0s;
+
+		// when navigation-is-open is fired
+		// slide-navigation-wrapper is called again here
+		.slide-navigation-wrapper{
+			// transform on the X axis `0`
+			//@include transform(translateX(0));
+			transform:translateX(0);
+			// animation duration - 0.2s slow
+
+			transition:transform $animation-duration - 0.2s;
+			// timing function to make animation smooth
+			transition-timing-function:cubic-bezier(.82,.01,.77,.78);
+		}
+	}
 }
 
 /* Nest 2
-#title <h2>
-slide-nav <div>
+slide-nav div
+#title id of h2
 */
 
-// style title
-#navTitle{
-    font-family: $lato;
-    color:$text;
-    position: relative;
-    font-size:ms(1);
-    font-weight: bold;
-    margin-top: 2.7em;
-    padding-left: 20px;
-    margin-top: 0em;
-
-    .slide-nav::after{
-        position: absolute;
-        left:0;
-        bottom: -20px;
-        height:1px;
-    }
+#title{
+	font-family:$lato;
+	position: relative;
+	//margin-bottom:1.7em;
+	font-size:ms(1);
+	font-weight:$lato-bold;
+	color:#fefefe;
 }
 
 /* Nest 3
- slide-primary-nav <ul>
- links  <a>
+<ul> sde-primary-nav
+<a> links
 */
-
 .slide-nav .slide-primary-nav{
-    margin-top:5em;
+	padding:0;
 
-    li{
-        list-style: none;
-        margin: 1.6em 0;
-    }
+	li{
+		list-style:none;
+		margin:1.6em 0;
+	}
 
-    a{
-        @include hover-links;
-        @include background($nav-link-bgColor);
-        border-bottom: none;
-        padding: 5px;
-        background-size: 100% 100px;
-        font-size:ms(1);
-        margin-left: -20px;
-        font-family: $lato;
-        color:$text;
-        display: inline-block;
-        &.selected{
-            color:cyan;
-        }
-        // add class `no-touch` (modernizr), select slide-nav,
-        // select slide-primary-nav with & selector and apply hover state
-        &:hover{
-            color:$hawaiian-blue;
-        }
-    }
-}
-
-.animateTop{
-  transition:transform 0.5s;
-  transform:translateY(10px);
-}
-
-.animateBottom{
-  transition:transform 0.5s;
-  transform:translateY(-10px);
-}
-
-.is-closed{
-  transition:transform 0.5s;
-  transform:translateY(0px);
-}
-
-.backup{
-  transition:transform 0.5s;
-  transform:translateY(0px);
-}
-
-.backup-link{
-  transition:transform 0.5s;
-  transform:translateY(0px);
+	a{
+		font-family:$lato;
+		font-size:ms(1);
+		color:rgba($color-3, .6);
+		display:inline-block;
+		// when links are selected they change color
+		&.selected{
+			color:$typeColor;
+		}
+		// add new class no-touch, select slide-nav,
+		// select slide-primary-nav and apply hover state to selected class
+		// .no-touch .slide-nav .slide-primary-nav .selected:hover
+		.no-touch &:hover{
+			color:#fefefe;
+		}
+	}
 }
